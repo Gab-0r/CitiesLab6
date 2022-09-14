@@ -1,6 +1,7 @@
 package com.example.citieslab6.local
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 
@@ -12,4 +13,6 @@ interface CityDao {
 
     @Query("SELECT * FROM table_city")
     suspend fun getCities() : MutableList<LocalCity>
+    @Delete
+    suspend fun deleteCity(localCity: LocalCity)
 }

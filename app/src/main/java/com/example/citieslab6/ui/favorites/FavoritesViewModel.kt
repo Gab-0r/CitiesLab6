@@ -21,4 +21,10 @@ class FavoritesViewModel : ViewModel() {
             _citiesLoaded.postValue(listFavoriteCities as ArrayList<LocalCity>)
         }
     }
+
+    fun deleteCity(localCity: LocalCity) {
+        viewModelScope.launch {
+            localCityRepository.deleteCity(localCity)
+        }
+    }
 }

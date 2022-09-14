@@ -1,4 +1,4 @@
-package com.example.citieslab6.ui.detail
+package com.example.citieslab6.ui.favorites
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,11 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.citieslab6.R
 import com.example.citieslab6.databinding.CardItemCityBinding
 import com.example.citieslab6.local.LocalCity
-import com.example.citieslab6.server.model.citiesListItem
+import com.example.citieslab6.server.model.citiesList
 
 class CitiesFavoriteAdapter(
     private val CitiesList: ArrayList<LocalCity>,
-    private val onItemClicked: (LocalCity) -> Unit
+    private val onItemClicked: (LocalCity) -> Unit,
+    private val onLongItemClicked : (LocalCity) -> Unit
 ) : RecyclerView.Adapter<CitiesFavoriteAdapter.CitiesFavoriteViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CitiesFavoriteViewHolder {
@@ -23,6 +24,9 @@ class CitiesFavoriteAdapter(
         val city = CitiesList[position]
         holder.bindCities(city)
         holder.itemView.setOnClickListener { onItemClicked(CitiesList[position]) }
+        holder.itemView.setOnLongClickListener{ onLongItemClicked(CitiesList[position])
+            true
+        }
     }
 
     override fun getItemCount(): Int = CitiesList.size

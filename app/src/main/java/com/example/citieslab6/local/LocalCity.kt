@@ -3,6 +3,7 @@ package com.example.citieslab6.local
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(tableName = "table_city")
 data class LocalCity(
@@ -14,7 +15,4 @@ data class LocalCity(
     @ColumnInfo(name = "cityGmt") val cityGmt: String?,
     @ColumnInfo(name = "cityLatitude") val cityLatitude: String?,
     @ColumnInfo(name = "cityLongitude") val cityLongitude: String?
-)
-{
-
-}
+) : Serializable

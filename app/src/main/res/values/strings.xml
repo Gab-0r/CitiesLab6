@@ -16,4 +16,6 @@
     <string name="city_latitude_string">Latitud:</string>
     <string name="city_gmt_string">GMT</string>
     <string name="fragment_detail">Detalles</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
 </resources>
