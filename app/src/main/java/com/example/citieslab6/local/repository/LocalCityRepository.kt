@@ -9,4 +9,6 @@ class LocalCityRepository {
         val cityDao: CityDao = CitiesData2022.database.CityDao()
         cityDao.createCity(localcity)
     }
+
+    suspend fun getCities() = CitiesData2022.database.CityDao().getCities()
 }
