@@ -154,4 +154,14 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/detail_city_gmt"
         app:layout_constraintTop_toBottomOf="@+id/deatail_city_region" />
+
+    <ImageView
+        android:id="@+id/favorite_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toEndOf="@+id/detail_city_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_empty_fav" />
 </androidx.constraintlayout.widget.ConstraintLayout>

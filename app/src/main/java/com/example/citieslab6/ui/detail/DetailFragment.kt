@@ -34,6 +34,11 @@ class DetailFragment : Fragment() {
             gmtOffset.text = city.timeZone?.gmtOffset?.toInt().toString()
             detailCityLatitudValue.text = city.geoPosition?.latitude.toString()
             detailCityLongitudValue.text = city.geoPosition?.longitude.toString()
+
+            favoriteImageView.setOnClickListener {
+                detailViewModel.addCityToFavorites(city)
+            }
+
         }
     }
 }
