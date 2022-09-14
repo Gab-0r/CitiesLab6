@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CitiesLab6</string>
+    <string name="title_list">Ciudades</string>
+    <string name="title_favorites">Favoritos</string>
+    <string name="title_detail">Detalle</string>
+    <string name="release_date_label">Release date:</string>
+    <string name="release_date_example">30-nov-2020</string>
+    <string name="vote_average_example">10</string>
+    <string name="vote_average_label">Vote average:</string>
+    <string name="summary">Resumen</string>
+    <string name="city_name">Nombre de la ciudad</string>
+    <string name="city_region_string">Región:</string>
+    <string name="city_country_string">País:</string>
+    <string name="city_timezone_string">Zona horaria:</string>
+    <string name="city_longitud_string">Longitud:</string>
+    <string name="city_latitude_string">Latitud:</string>
+    <string name="city_gmt_string">GMT</string>
+    <string name="fragment_detail">Detalles</string>
+</resources>
