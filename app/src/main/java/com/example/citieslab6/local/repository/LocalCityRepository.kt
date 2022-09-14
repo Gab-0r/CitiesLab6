@@ -15,4 +15,6 @@ class LocalCityRepository {
         val cityDao: CityDao = CitiesData2022.database.CityDao()
         cityDao.deleteCity(localCity)
     }
+
+    suspend fun searchCity(cityKey: String?) = CitiesData2022.database.CityDao().searchCity(cityKey)
 }

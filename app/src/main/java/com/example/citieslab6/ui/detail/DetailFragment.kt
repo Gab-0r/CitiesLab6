@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
+import com.example.citieslab6.R
 import com.example.citieslab6.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
@@ -24,8 +25,17 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val city = args.city
+        detailViewModel.searchCity(city.key)
+
+        detailViewModel.cityExist.observe(viewLifecycleOwner){
+            if(it)
+                detailBinding.favoriteImageView.setImageDrawable(resources.getDrawable(R.drawable.ic_favorites))
+            else
+                detailBinding.favoriteImageView.setImageDrawable(resources.getDrawable(R.drawable.ic_empty_fav))
+        }
+
+
         with(detailBinding){
             detailCityName.text = city.englishName
             detailCityCountryValue.text = city.country?.englishName

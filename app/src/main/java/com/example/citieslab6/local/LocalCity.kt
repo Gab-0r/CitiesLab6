@@ -7,7 +7,7 @@ import java.io.Serializable
 
 @Entity(tableName = "table_city")
 data class LocalCity(
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") val id: Int,
+    @PrimaryKey @ColumnInfo(name = "id") val id: String,
     @ColumnInfo(name = "cityName") val cityName: String?,
     @ColumnInfo(name = "cityCountry") val cityCountry: String?,
     @ColumnInfo(name = "cityRegion") val cityRegion: String?,
@@ -15,4 +15,4 @@ data class LocalCity(
     @ColumnInfo(name = "cityGmt") val cityGmt: String?,
     @ColumnInfo(name = "cityLatitude") val cityLatitude: String?,
     @ColumnInfo(name = "cityLongitude") val cityLongitude: String?
-) : Serializable
+)

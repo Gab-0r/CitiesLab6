@@ -15,4 +15,6 @@ interface CityDao {
     suspend fun getCities() : MutableList<LocalCity>
     @Delete
     suspend fun deleteCity(localCity: LocalCity)
+    @Query("SELECT * FROM table_city WHERE id LIKE :cityKey")
+    suspend fun searchCity(cityKey: String?): LocalCity
 }

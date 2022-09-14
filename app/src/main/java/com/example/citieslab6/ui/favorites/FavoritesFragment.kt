@@ -52,6 +52,7 @@ class FavoritesFragment : Fragment() {
                 setMessage("Desea eliminar ${localCity.cityName} de sus favoritos?")
                 setPositiveButton(R.string.accept){ dialog, id ->
                     favoritesViewModel.deleteCity(localCity)
+                    favoritesViewModel.loadCities()
                 }
                 setNegativeButton(R.string.cancel){ dialog, id ->
                 }
@@ -63,5 +64,6 @@ class FavoritesFragment : Fragment() {
 
 
     private fun onItemClicked(localcity: LocalCity) {
+
     }
 }
